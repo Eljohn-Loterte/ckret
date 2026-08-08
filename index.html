@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chemistry Love Letter - Interactive Web</title>
+  <meta name="description" content="Cute warm pastel chemistry love letter with draggable bow and evasive coffee invitation button." />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+
+  <!-- Floating Hearts & Chemistry Particle Layer -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Interactive Bow & Arrow Canvas Layer -->
+  <canvas id="bow-canvas"></canvas>
+
+  <!-- Top Controls Header -->
+  <header class="hud-header">
+    <div class="hud-controls">
+      <button class="pixel-btn" id="reset-btn" title="Reset Bow & Envelope">
+        🔄 RESET
+      </button>
+    </div>
+  </header>
+
+  <!-- Target Envelope Stage -->
+  <div class="envelope-stage" id="envelope-stage">
+    <div class="envelope-wrapper" id="envelope-wrapper">
+      <span class="envelope-heart-seal">🧪</span>
+    </div>
+    <div class="envelope-label">CHEMISTRY LOVE LETTER</div>
+  </div>
+
+  <!-- Instruction Banner -->
+  <div class="instruction-banner" id="instruction-banner">
+    <p>Aim & release to shoot the arrow ♥</p>
+  </div>
+
+  <!-- Modal Overlay for Retro OS Window Sequential Letters -->
+  <div class="modal-overlay hidden" id="modal-overlay">
+    <div id="modal-content"></div>
+  </div>
+
+  <!-- Main JavaScript Entry -->
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
