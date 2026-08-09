@@ -22,7 +22,7 @@ export class LetterManager {
       'Really? :<',
       'Think again! 🧪',
       'Are you positive? 🤖',
-      'No, decline'
+      'Decline'
     ];
 
     this.initEvents();
@@ -71,7 +71,7 @@ export class LetterManager {
   renderCurrentLetter() {
     const step = this.currentLetterStep;
     let titlePath = '~ / STATUS';
-    if (step === 1) titlePath = '~ / LETTER-FOR-KYLA';
+    if (step === 1) titlePath = '~ / LETTER-FOR-U';
     if (step === 2) titlePath = '~ / RESUME';
     if (step === 3) titlePath = '~ / COFFEE-INVITATION';
 
@@ -134,34 +134,41 @@ export class LetterManager {
     }
   }
 
-  // --- LETTER 1: FORMAL CLEAN LETTER FOR KYLA ---
+  // --- LETTER 1: FORMAL CLEAN LETTER FOR U ---
   getLetter1HTML() {
     return `
       <div class="term-line prompt">
-        <span class="prompt-symbol">$</span> cat ~/letter_for_kyla.txt
+        <span class="prompt-symbol">$</span> cat ~/letter_for_u.txt
       </div>
       <div class="term-output">
-        <p class="term-line text">Dear Kyla, 👋</p>
+        <p class="term-line text">Hi Kyla :></p>
         <br/>
-        <p class="term-line text">I hope this letter finds you well.</p>
-        <p class="term-line text">Having you in my life is truly wonderful. Thank you for bringing so much happiness, chemistry, and sweetness into my universe! ✨💖</p>
+        <p class="term-line text">Congrats you have been selected by the owner to be his crush HAHAHAHAH ₍^. .^₎⟆</p>
+        <p class="term-line text">I find you really attractive and cute totoo pramis hehehe. So I made this to tell you na den</p>
+        <p class="term-line text">And also to get the chance to even get to know you more and magpakilala den HAHAHAH</p>
         <br/>
         <p class="term-line prompt-end"><span class="prompt-symbol">$</span> <span class="blinking-cursor">█</span></p>
       </div>
     `;
   }
 
-  // --- LETTER 2: RESUME.JSON (150px x 150px AVATAR IMAGE SIDE-BY-SIDE WITH NAME & COURSE) ---
+  // --- LETTER 2: RESUME.JSON (CURRICULUM VITAE WITH STATS) ---
   getLetter2HTML() {
     return `
       <div class="term-line prompt">
         <span class="prompt-symbol">$</span> cat ~/resume.json
       </div>
       <div class="term-output">
+        <!-- Curriculum Vitae Main Header Banner -->
+        <div class="cv-main-title-banner">
+          <span class="cv-title-icon">📋</span>
+          <h2 class="cv-main-title">Curriculum Vitae</h2>
+        </div>
+
         <!-- Side-by-Side Profile Header with 150px x 150px Avatar -->
         <div class="pink-cv-header-side">
           <div class="cv-avatar-150">
-            <img src="/avatar.png" alt="Profile Avatar" class="cv-avatar-img" />
+            <img src="/avatar.jpg" alt="Profile Avatar" class="cv-avatar-img" />
           </div>
           <div class="cv-details-side">
             <h3 class="cv-name-side">Eljohn</h3>
@@ -169,10 +176,48 @@ export class LetterManager {
           </div>
         </div>
 
+        <!-- Skills Section Divider Header -->
+        <div class="cv-section-divider">
+          <span class="cv-section-title">📊 SKILLS</span>
+        </div>
+
         <!-- 2 COLUMNS x 3 ROWS GRID -->
         <div class="skills-2col-grid">
-          <!-- Stat 1: Loyalty -->
-          <div class="simple-stat-item">
+          <!-- Stat 1: Sweetness (Red) -->
+          <div class="simple-stat-item stat-item-red">
+            <div class="stat-top-line">
+              <span class="stat-pill-badge">SWEETNESS</span>
+              <span class="stat-percent">95%</span>
+            </div>
+            <div class="simple-bar-track">
+              <div class="simple-bar-fill" style="width: 95%;"></div>
+            </div>
+          </div>
+
+          <!-- Stat 2: Strength (Orange) -->
+          <div class="simple-stat-item stat-item-orange">
+            <div class="stat-top-line">
+              <span class="stat-pill-badge">STRENGTH</span>
+              <span class="stat-percent">90%</span>
+            </div>
+            <div class="simple-bar-track">
+              <div class="simple-bar-fill" style="width: 90%;"></div>
+            </div>
+          </div>
+
+          <!-- Stat 3: Athleticism (Yellow) -->
+          <div class="simple-stat-item stat-item-yellow">
+            <div class="stat-top-line">
+              <span class="stat-pill-badge">ATHLETICISM</span>
+              <span class="stat-percent">96%</span>
+            </div>
+            <div class="simple-bar-track">
+              <div class="simple-bar-fill" style="width: 96%;"></div>
+            </div>
+          </div>
+
+          <!-- Stat 4: Loyalty (Blue) -->
+          <div class="simple-stat-item stat-item-blue">
             <div class="stat-top-line">
               <span class="stat-pill-badge">LOYALTY</span>
               <span class="stat-percent">100%</span>
@@ -182,10 +227,10 @@ export class LetterManager {
             </div>
           </div>
 
-          <!-- Stat 2: Looks -->
-          <div class="simple-stat-item">
+          <!-- Stat 5: Pakikisama (Green) -->
+          <div class="simple-stat-item stat-item-green">
             <div class="stat-top-line">
-              <span class="stat-pill-badge">LOOKS</span>
+              <span class="stat-pill-badge">PAKIKISAMA</span>
               <span class="stat-percent">99%</span>
             </div>
             <div class="simple-bar-track">
@@ -193,47 +238,14 @@ export class LetterManager {
             </div>
           </div>
 
-          <!-- Stat 3: IT & Tech -->
-          <div class="simple-stat-item">
+          <!-- Stat 6: Trippings (Violet) -->
+          <div class="simple-stat-item stat-item-violet">
             <div class="stat-top-line">
-              <span class="stat-pill-badge">IT & TECH</span>
-              <span class="stat-percent">95%</span>
+              <span class="stat-pill-badge">TRIPPINGS</span>
+              <span class="stat-percent">99%</span>
             </div>
             <div class="simple-bar-track">
-              <div class="simple-bar-fill" style="width: 95%;"></div>
-            </div>
-          </div>
-
-          <!-- Stat 4: Patience -->
-          <div class="simple-stat-item">
-            <div class="stat-top-line">
-              <span class="stat-pill-badge">PATIENCE</span>
-              <span class="stat-percent">98%</span>
-            </div>
-            <div class="simple-bar-track">
-              <div class="simple-bar-fill" style="width: 98%;"></div>
-            </div>
-          </div>
-
-          <!-- Stat 5: Caffeine Synthesis -->
-          <div class="simple-stat-item">
-            <div class="stat-top-line">
-              <span class="stat-pill-badge">CAFFEINE</span>
-              <span class="stat-percent">100%</span>
-            </div>
-            <div class="simple-bar-track">
-              <div class="simple-bar-fill" style="width: 100%;"></div>
-            </div>
-          </div>
-
-          <!-- Stat 6: Chemistry -->
-          <div class="simple-stat-item">
-            <div class="stat-top-line">
-              <span class="stat-pill-badge">CHEMISTRY</span>
-              <span class="stat-percent">98%</span>
-            </div>
-            <div class="simple-bar-track">
-              <div class="simple-bar-fill" style="width: 98%;"></div>
+              <div class="simple-bar-fill" style="width: 99%;"></div>
             </div>
           </div>
         </div>
@@ -247,12 +259,14 @@ export class LetterManager {
   getLetter3HTML() {
     return `
       <div class="term-line prompt">
-        <span class="prompt-symbol">$</span> ./propose_coffee_date.py --to="Kyla"
+        <span class="prompt-symbol">$</span> ./propose_hangout.py>
       </div>
       <div class="term-output" id="coffee-term-content">
         <p class="term-line text large">
-          Dear Kyla, <br/><br/>
-          Would you do me the honor of accompanying me to grab a cup of coffee together? ♡
+          Since you've reached this far I would like to ask you if you want to hangout with me someday? or maybe on thursday or sunday church? =^.^=
+        </p>
+        <p class="term-line text large">
+          No worries the choice is yours no pressure hehe :> (maybe meron slight HAHAHAHAH)
         </p>
         <br/>
 
@@ -293,9 +307,12 @@ export class LetterManager {
       if (termContent) {
         termContent.innerHTML = `
           <div class="term-victory-box">
-            <p class="term-line success">🎉 Yippeee! Coffee date with Kyla is confirmed! ☕💖</p>
+            <div class="victory-gif-wrapper">
+              <img src="/gif2.gif" alt="Victory GIF" class="victory-gif" />
+            </div>
+            <p class="term-line success">🎉 Yippeee!</p>
             <br/>
-            <button class="pink-term-btn yes" id="victory-close-btn">[ DATE CONFIRMED! SEE YOU SOON, KYLA! ☕💖 ]</button>
+            <button class="pink-term-btn yes" id="victory-close-btn">[ YIPPEEEE CAN'T WAIT TO SEE YOU ]</button>
           </div>
         `;
         document.getElementById('victory-close-btn').addEventListener('click', () => this.closeModal());
@@ -309,9 +326,11 @@ export class LetterManager {
       if (termContent) {
         termContent.innerHTML = `
           <div class="term-victory-box">
+            <div class="victory-gif-wrapper">
+              <img src="/gif.gif" alt="GIF" class="victory-gif" />
+            </div>
             <p class="term-line text">
-              Dear Kyla,<br/><br/>
-              Thank you so much for taking the time to read through my letters. I completely understand and respect your decision. Wishing you a wonderful day ahead! ✨💖
+              No worries I understand :> .Thank you so much for taking the time to read all these wish you have a great day ahead :>
             </p>
             <br/>
             <button class="pink-term-btn no" id="decline-close-btn">[ CLOSE WINDOW ✨ ]</button>

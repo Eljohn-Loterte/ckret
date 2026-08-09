@@ -518,6 +518,53 @@ body {
   color: #8b3a42;
 }
 
+/* CURRICULUM VITAE MAIN HEADER (CLEAN TITLE) */
+.cv-main-title-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 8px;
+  background: transparent;
+  border: none;
+  padding: 4px 0 6px 0;
+  margin-bottom: 8px;
+  box-shadow: none;
+}
+
+.cv-title-icon {
+  font-size: 18px;
+}
+
+.cv-main-title {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 14px;
+  color: #8b3a42;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+/* SKILLS SECTION DIVIDER HEADER (CLEAN TITLE) */
+.cv-section-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 4px 0 2px 0;
+}
+
+.cv-section-title {
+  font-family: var(--font-code), monospace;
+  font-size: 11px;
+  font-weight: 800;
+  color: #8b3a42;
+  background: transparent;
+  padding: 0;
+  border: none;
+  letter-spacing: 0.5px;
+  box-shadow: none;
+}
+
 /* SIDE-BY-SIDE PROFILE HEADER (150px x 150px AVATAR IMAGE & TEXT) */
 .pink-cv-header-side {
   display: flex;
@@ -525,8 +572,8 @@ body {
   gap: 20px;
   background: transparent;
   border: none;
-  padding: 4px 0 10px 0;
-  margin-bottom: 6px;
+  padding: 2px 0 2px 0;
+  margin-bottom: 0;
 }
 
 .cv-avatar-150 {
@@ -640,6 +687,98 @@ body {
   background: #14b8a6;
   border-radius: 10px;
   transition: width 1s ease-in-out;
+}
+
+/* SKILL COLOR VARIANTS (Red, Orange, Yellow, Green, Blue, Violet) */
+
+/* 1. Red - Sweetness */
+.stat-item-red .stat-pill-badge {
+  background: #ffe3e8;
+  color: #b91c1c;
+}
+.stat-item-red .stat-percent {
+  color: #b91c1c;
+}
+.stat-item-red .simple-bar-track {
+  background: #fff0f3;
+}
+.stat-item-red .simple-bar-fill {
+  background: #ef4444;
+}
+
+/* 2. Orange - Strength */
+.stat-item-orange .stat-pill-badge {
+  background: #ffedd5;
+  color: #c2410c;
+}
+.stat-item-orange .stat-percent {
+  color: #c2410c;
+}
+.stat-item-orange .simple-bar-track {
+  background: #fff7ed;
+}
+.stat-item-orange .simple-bar-fill {
+  background: #f97316;
+}
+
+/* 3. Yellow - Athleticism */
+.stat-item-yellow .stat-pill-badge {
+  background: #fef9c3;
+  color: #854d0e;
+}
+.stat-item-yellow .stat-percent {
+  color: #854d0e;
+}
+.stat-item-yellow .simple-bar-track {
+  background: #fefce8;
+}
+.stat-item-yellow .simple-bar-fill {
+  background: #eab308;
+}
+
+/* 4. Green - Pakikisama */
+.stat-item-green .stat-pill-badge {
+  background: #dcfce7;
+  color: #15803d;
+}
+.stat-item-green .stat-percent {
+  color: #15803d;
+}
+.stat-item-green .simple-bar-track {
+  background: #f0fdf4;
+}
+.stat-item-green .simple-bar-fill {
+  background: #22c55e;
+}
+
+/* 5. Blue - Loyalty */
+.stat-item-blue .stat-pill-badge {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+.stat-item-blue .stat-percent {
+  color: #1d4ed8;
+}
+.stat-item-blue .simple-bar-track {
+  background: #eff6ff;
+}
+.stat-item-blue .simple-bar-fill {
+  background: #3b82f6;
+}
+
+/* 6. Violet - Trippings */
+.stat-item-violet .stat-pill-badge {
+  background: #f3e8ff;
+  color: #6b21a8;
+}
+.stat-item-violet .stat-percent {
+  color: #6b21a8;
+}
+.stat-item-violet .simple-bar-track {
+  background: #faf5ff;
+}
+.stat-item-violet .simple-bar-fill {
+  background: #a855f7;
 }
 
 .mac-nav {
@@ -862,9 +1001,35 @@ body {
   position: relative;
 }
 
-/* Victory Container */
-.victory-container {
+/* Victory Container & GIF Styling */
+.victory-container, .term-victory-box {
   padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.victory-gif-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 12px auto;
+  max-width: 170px;
+  max-height: 170px;
+  border-radius: 12px;
+  border: 2.5px solid #e86375;
+  overflow: hidden;
+  box-shadow: 2px 3px 0 #8b3a42;
+  background: #ffffff;
+}
+
+.victory-gif {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .victory-icon {
@@ -972,9 +1137,33 @@ body {
     font-size: 9px;
   }
 
+  .cv-main-title-banner {
+    padding: 2px 0 4px 0;
+    margin-bottom: 6px;
+    gap: 6px;
+  }
+
+  .cv-main-title {
+    font-size: 11px;
+  }
+
+  .cv-title-icon {
+    font-size: 15px;
+  }
+
+  .cv-section-divider {
+    margin: 3px 0 2px 0;
+  }
+
+  .cv-section-title {
+    font-size: 10px;
+    padding: 0;
+  }
+
   .pink-cv-header-side {
     gap: 14px;
-    padding-bottom: 6px;
+    padding-bottom: 2px;
+    margin-bottom: 0;
   }
 
   .cv-avatar-150 {

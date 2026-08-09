@@ -6,7 +6,7 @@ export class ParticleSystem {
     this.ctx = canvas.getContext('2d');
     this.particles = [];
     this.chemElements = [
-      '💖', '🧪', 'H₂O', 'C₈H₁₀N₄O₂', '✨', '⚛️', '🧬'
+      '🧪', 'H₂O', 'C₈H₁₀N₄O₂', '⚗️', '⚛️', '🧬'
     ];
     this.initBackgroundParticles();
   }
