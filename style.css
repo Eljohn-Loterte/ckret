@@ -316,12 +316,10 @@ body {
   overflow: hidden;
   background-color: #fff0f3;
   background-image:
-    /* Vertical red/pink notebook margin line */
-    linear-gradient(90deg, transparent 38px, rgba(232, 99, 117, 0.4) 38px, rgba(232, 99, 117, 0.4) 40px, transparent 40px),
     /* Horizontal notebook ruled lines */
     linear-gradient(transparent 25px, rgba(232, 99, 117, 0.22) 26px);
-  background-size: 100% 100%, 100% 26px;
-  padding: 22px 20px 22px 48px;
+  background-size: 100% 26px;
+  padding: 22px 24px;
   min-height: 330px;
   color: #5c222b;
   font-family: var(--font-code), 'Courier Prime', monospace;
